@@ -6,9 +6,9 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public class ConectionDB {
-    private static final String URL = "jdbc:mysql://localhost:3306/BDBiblioteca";
-    private static final String USUARIO = "root";
-    private static final String PASSWORD = "123456789";
+    private static final String URL = "jdbc:mysql://localhost:3306/bdbiblioteca";
+    private static final String USUARIO = "SDBM15";
+    private static final String PASSWORD = "a123456789A.";
 
     private static HikariDataSource dataSource;
 
@@ -29,13 +29,13 @@ public class ConectionDB {
 
     // Método para obtener la conexión
     public static Connection getConnection() throws SQLException {
-        return dataSource.getConnection(); // CORREGIDO: renturn → return, datasocure → dataSource
+        return dataSource.getConnection(); 
     }
 
-    // Método para cerrar el pool si se necesita
+    
     public static void closePool() {
         if (dataSource != null) {
-            dataSource.close(); // CORREGIDO: datasocuere → dataSource
+            dataSource.close(); 
         }
     }
 }
