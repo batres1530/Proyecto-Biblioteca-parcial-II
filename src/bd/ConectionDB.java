@@ -20,9 +20,9 @@ public class ConectionDB {
         config.setPassword(PASSWORD);
         config.setMaximumPoolSize(10);
         config.setMinimumIdle(5);
-        config.setIdleTimeout(3000);
-        config.setMaxLifetime(20000);
-        config.setConnectionTimeout(1000);
+        config.setIdleTimeout(30000);
+        config.setMaxLifetime(200000);
+        config.setConnectionTimeout(10000);
 
         dataSource = new HikariDataSource(config);
     }

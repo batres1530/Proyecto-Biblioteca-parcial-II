@@ -1,11 +1,7 @@
-
 package model;
 
-/**
- *
- * @author sdbm1
- */
 import java.util.Date;
+
 public class Prestamo {
     private int id;
     private int usuarioId;
@@ -14,52 +10,62 @@ public class Prestamo {
     private Date fechaPrestamo;
     private Date fechaLimite;
 
-    public int getId() {
-        return id;
+    public Prestamo(int id, int usuarioId, int libroId, int empleadoId, Date fechaPrestamo, Date fechaLimite) {
+        this.id = id;
+        this.usuarioId = usuarioId;
+        this.libroId = libroId;
+        this.empleadoId = empleadoId;
+        this.fechaPrestamo = fechaPrestamo;
+        this.fechaLimite = fechaLimite;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    // Getters estándar
+    public int getId() {
+        return id;
     }
 
     public int getUsuarioId() {
         return usuarioId;
     }
 
-    public void setUsuarioId(int usuarioId) {
-        this.usuarioId = usuarioId;
-    }
-
     public int getLibroId() {
         return libroId;
-    }
-
-    public void setLibroId(int libroId) {
-        this.libroId = libroId;
     }
 
     public int getEmpleadoId() {
         return empleadoId;
     }
 
-    public void setEmpleadoId(int empleadoId) {
-        this.empleadoId = empleadoId;
-    }
-
     public Date getFechaPrestamo() {
         return fechaPrestamo;
-    }
-
-    public void setFechaPrestamo(Date fechaPrestamo) {
-        this.fechaPrestamo = fechaPrestamo;
     }
 
     public Date getFechaLimite() {
         return fechaLimite;
     }
 
+    // Setters (opcional si no necesitas modificar)
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setUsuarioId(int usuarioId) {
+        this.usuarioId = usuarioId;
+    }
+
+    public void setLibroId(int libroId) {
+        this.libroId = libroId;
+    }
+
+    public void setEmpleadoId(int empleadoId) {
+        this.empleadoId = empleadoId;
+    }
+
+    public void setFechaPrestamo(Date fechaPrestamo) {
+        this.fechaPrestamo = fechaPrestamo;
+    }
+
     public void setFechaLimite(Date fechaLimite) {
         this.fechaLimite = fechaLimite;
     }
-    
 }
